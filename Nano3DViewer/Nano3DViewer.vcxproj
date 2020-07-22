@@ -24,6 +24,7 @@
     <ProjectGuid>{5be59126-7eea-4504-97c0-06a148d7e863}</ProjectGuid>
     <RootNamespace>Nano3DViewer</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>Examples</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -92,6 +93,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -140,10 +142,75 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Application.cpp" />
+    <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="Cube.cpp" />
+    <ClCompile Include="GLSLProgram.cpp" />
+    <ClCompile Include="Grid.cpp" />
+    <ClCompile Include="HeightMap.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Plane.cpp" />
+    <ClCompile Include="SceneBlinnPhong.cpp" />
+    <ClCompile Include="SceneParticles.cpp" />
+    <ClCompile Include="ScenePBR.cpp" />
+    <ClCompile Include="ScenePointSprite.cpp" />
+    <ClCompile Include="SceneReflectCube.cpp" />
+    <ClCompile Include="SceneRipple.cpp" />
+    <ClCompile Include="SceneShadowMap.cpp" />
+    <ClCompile Include="SceneSubdivide.cpp" />
+    <ClCompile Include="SceneTerrain.cpp" />
+    <ClCompile Include="SkyBox.cpp" />
+    <ClCompile Include="Terrain.cpp" />
+    <ClCompile Include="Texture.cpp" />
+    <ClCompile Include="TriangleMesh.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Application.h" />
+    <ClInclude Include="Camera.h" />
+    <ClInclude Include="Cube.h" />
+    <ClInclude Include="Drawable.h" />
+    <ClInclude Include="GLSLProgram.h" />
+    <ClInclude Include="Grid.h" />
+    <ClInclude Include="HeightMap.h" />
+    <ClInclude Include="ParticleUtils.h" />
+    <ClInclude Include="Plane.h" />
+    <ClInclude Include="Random.h" />
+    <ClInclude Include="Scene.h" />
+    <ClInclude Include="SceneBlinnPhong.h" />
+    <ClInclude Include="SceneParticles.h" />
+    <ClInclude Include="ScenePBR.h" />
+    <ClInclude Include="ScenePointSprite.h" />
+    <ClInclude Include="SceneReflectCube.h" />
+    <ClInclude Include="SceneRipple.h" />
+    <ClInclude Include="SceneShadowMap.h" />
+    <ClInclude Include="SceneSubdivide.h" />
+    <ClInclude Include="SceneTerrain.h" />
+    <ClInclude Include="SkyBox.h" />
+    <ClInclude Include="stb\stb_image.h" />
+    <ClInclude Include="stb\stb_image_write.h" />
+    <ClInclude Include="Terrain.h" />
+    <ClInclude Include="Texture.h" />
+    <ClInclude Include="TriangleMesh.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="shaders\blinnphong.frag.glsl" />
+    <None Include="shaders\blinnphong.vert.glsl" />
+    <None Include="shaders\flat_frag.glsl" />
+    <None Include="shaders\flat_vert.glsl" />
+    <None Include="shaders\particles_frag.glsl" />
+    <None Include="shaders\particles_vert.glsl" />
+    <None Include="shaders\phong.frag.glsl" />
+    <None Include="shaders\phong.vert.glsl" />
+    <None Include="shaders\pointsprite.frag.glsl" />
+    <None Include="shaders\pointsprite.geo.glsl" />
+    <None Include="shaders\pointsprite.vert.glsl" />
+    <None Include="shaders\rippledeformer.frag.glsl" />
+    <None Include="shaders\rippledeformer.vert.glsl" />
+    <None Include="shaders\skybox.frag.glsl" />
+    <None Include="shaders\skybox.vert.glsl" />
+    <None Include="shaders\subdivide.frag.glsl" />
+    <None Include="shaders\subdivide.vert.glsl" />
+    <None Include="shaders\terrain.frag.glsl" />
+    <None Include="shaders\terrain.vert.glsl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
